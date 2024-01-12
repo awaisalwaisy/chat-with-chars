@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [],
+  modules: ["@nuxtjs/kinde"],
 
   typescript: {
     shim: false,
@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   dir: {
     assets: "./app/assets",
-    // layouts: './app/layouts',
+    layouts: "./app/layouts",
     middleware: "./app/middleware",
     pages: "./app/pages",
     plugins: "./app/plugins",
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  components: [{ path: "~/app/components" }],
+  components: [{ path: "~/app/components" }, { path: "~/layouts" }],
 
   app: {
     rootTag: "main",
